@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(82, 1, 1);
+}
+
+
+header {
+    font-family: serif;
+    position: fixed; /* Fästa blocken */
+    top: 0;
+    width: 100%;
+    background-color: black; 
+    color: silver;
+    padding: 5px;
+    text-align: center;
+    z-index: 1000; 
+}
+
+.small-block {
+    position: fixed;
+    top: 60px; 
+    width: 100%;
+    height: 15px; 
+    background-color: orangered; 
+    z-index: 9999; 
+
+}
+
+/* Stoppar från att blockerna ska stacka på varandra */
+.container { 
+    display: flex;
+    flex-wrap: wrap; 
+    max-width: 1000px;
+    margin: 20px auto;
+    padding-top: 80px; 
+}
+
+main {
+    flex: 3; 
+    padding: 20px;
+}
+
+aside {
+    flex: 1; 
+    margin-left: 20px;
+    padding: 15px; 
+    height: 340px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.post {
+    background-color: whitesmoke;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.post h2 {
+    margin: 10px 0;
+}
+
+.post p {
+    margin: 10px 0;
+}
+
+.post a {
+    color: orangered;
+}
+
+.searchbar {
+    margin-bottom: 10px; 
+}
+
+.searchbar input {
+    width: calc(100% - 90px); 
+    padding: 8px; 
+    margin-right: 5px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.searchbar button {
+    padding: 10px; 
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.extra-info {
+    background-color: orangered;
+    padding: 10px; 
+    border: 5px solid black;
+    border-radius: 5px;
+    height: 240px;
+}
+
+.extra-info a {
+    color: black; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.extra-info a:hover {
+    color: red; 
+}
+/* Gap osv */
+.social-media {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 10px; 
+}
+/* Storlek logo */
+.social-logo {
+    width: 40px; 
+    height: auto;
+}
+
+footer {
+    background-color: black;
+    color: grey;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-content {
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0; 
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 15px; 
+}
+
+.footer-links a {
+    color: silver; 
+    text-decoration: none; 
+}
+
+.footer-links a:hover {
+    color: red; 
+}
+
+/* Minskar när fönstret dras ihop */
+@media (max-width: 770px) {
+    .container {
+        flex-direction: column;
+    }
+    aside {
+        margin-left: 0; 
+        margin-top: 20px; 
+    }
+}
